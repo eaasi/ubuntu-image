@@ -15,7 +15,7 @@ rootfs:
     - restricted
     - universe
     - multiverse
-  flavor: xubuntu
+  flavor: lubuntu
   pocket: updates
   seed:
     # See https://manpages.ubuntu.com/manpages/noble/en/man1/germinate.1.html
