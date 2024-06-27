@@ -31,6 +31,8 @@ customization:
   extra-packages:
     - name: openssh-server
     - name: librecad
+    - name: wine32
+    - name: wine-binfmt
   extra-snaps:
     - name: snapd
     # https://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg6051166.html
