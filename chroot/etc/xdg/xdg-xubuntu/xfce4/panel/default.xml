@@ -47,7 +47,7 @@
       <property name="menu-height" type="int" value="463"/>
       <property name="show-command-settings" type="bool" value="false"/>
       <property name="show-command-shutdown" type="bool" value="true"/>
-      <property name="show-command-suspend" type="bool" value="true"/>
+      <property name="show-command-suspend" type="bool" value="false"/>
       <property name="favorites" type="array">
         <value type="string" value="firefox_firefox.desktop"/>
         <value type="string" value="mousepad.desktop"/>
@@ -56,6 +56,7 @@
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
         <value type="string" value="xfhelp4.desktop"/>
         <value type="string" value="xfce4-about.desktop"/>
+        <value type="string" value="libreoffice-writer.desktop"/>
       </property>
       <property name="recent" type="array">
       </property>
@@ -63,6 +64,13 @@
       <property name="show-button-title" type="bool" value="true"/>
       <property name="button-title" type="string" value="Start"/>
       <property name="button-icon" type="string" value="start-here"/>
+      <property name="category-show-name" type="bool" value="true"/>
+      <property name="launcher-show-description" type="bool" value="true"/>
+      <property name="show-command-lockscreen" type="bool" value="false"/>
+      <property name="show-command-restart" type="bool" value="true"/>
+      <property name="show-command-logout" type="bool" value="false"/>
+      <property name="show-command-menueditor" type="bool" value="true"/>
+      <property name="show-command-profile" type="bool" value="false"/>
     </property>
     <property name="plugin-10" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
