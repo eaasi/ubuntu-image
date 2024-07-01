@@ -8,3 +8,4 @@ usermod -aG sudo user
 ssh-keygen -A
 
 apt-get remove -y apport python3-apport apport-symptoms
+update-initramfs -u
