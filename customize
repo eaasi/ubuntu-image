@@ -16,5 +16,7 @@ apt-get install -y wine32 wine-binfmt binfmt-support
 
 cp /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
 
+update-initramfs -u
+
 rm -rf /var/lib/apt/lists/*
 mv /etc/resolv.conf_ /etc/resolv.conf
