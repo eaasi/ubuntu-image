@@ -8,3 +8,8 @@ usermod -aG sudo user
 ssh-keygen -A
 
 apt-get remove -y apport python3-apport apport-symptoms
+
+dpkg --add-architecture i386
+apt-get update
+apt-get install -y wine32 wine-binfmt
+rm -rf /var/lib/apt/lists/*
