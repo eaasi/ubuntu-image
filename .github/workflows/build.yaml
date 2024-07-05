@@ -8,6 +8,9 @@ jobs:
     - uses: actions/checkout@HEAD
     - run: sudo chmod 1777 /mnt
     - run: |
+        sudo mkdir -m 1777 /mnt/tmp /mnt/tmp_workdir
+        sudo mount -t overlay / -o upperdir=/mnt/tmp -o workdir=/mnt/tmp_workdir -o lowerdir=/tmp /tmp
+    - run: |
         ./create-image -O /mnt
     - uses: oras-project/setup-oras@HEAD
     - run: |
