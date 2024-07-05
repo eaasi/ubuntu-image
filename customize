@@ -1,7 +1,20 @@
 #!/bin/sh -xeu
 
+mv /etc/resolv.conf /etc/resolv.conf_
+echo nameserver 1.0.0.1 >> /etc/resolv.conf
+
+sed -Ei 's/^(Suites: )(.*)$/\1 \2 \2-security \2-updates \2-backports/' /etc/apt/sources.list.d/ubuntu.sources
+dpkg --add-architecture i386
+apt-get update
+
 useradd -mp "" user
 echo "user:user" | chpasswd
 usermod -aG sudo user
 
 apt-get remove -y apport python3-apport apport-symptoms
+apt-get install -y wine32 wine-binfmt binfmt-support
+
+cp /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
+
+rm -rf /var/lib/apt/lists/*
+mv /etc/resolv.conf_ /etc/resolv.conf
