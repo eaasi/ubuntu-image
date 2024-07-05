@@ -1,0 +1,2 @@
+[Desktop Entry]
+Exec=sh -c "gio mount -d /dev/sr0 && xdg-open /media/*/*"
