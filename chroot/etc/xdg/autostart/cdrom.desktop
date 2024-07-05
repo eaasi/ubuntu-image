@@ -1,2 +1,4 @@
 [Desktop Entry]
-Exec=sh -c "gio mount -d /dev/sr0 && xdg-open /media/*/*"
+Name=Automatically show CD-ROM contents
+Exec=sh -c "gio mount -d /dev/sr0 && xdg-open /media/*/* || :"
+Type=Application
