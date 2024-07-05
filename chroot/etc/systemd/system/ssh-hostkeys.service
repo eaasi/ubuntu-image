@@ -1,0 +1,9 @@
+[Unit]
+Description=Manually create SSH host keys as Ubuntu is missing "AUTOCREATE_SERVER_KEYS"
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ssh-keygen -A
+
+[Install]
+RequiredBy=ssh.service
