@@ -34,6 +34,7 @@ customization:
   extra-ppas:
     - name: xtradeb/apps
   extra-packages:
+    - name: linux-image-virtual
     - name: openssh-server
     - name: librecad
     - name: chromium
