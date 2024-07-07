@@ -71,6 +71,7 @@
       <property name="show-command-logout" type="bool" value="false"/>
       <property name="show-command-menueditor" type="bool" value="true"/>
       <property name="show-command-profile" type="bool" value="false"/>
+      <property name="profile-shape" type="int" value="2"/>
     </property>
     <property name="plugin-10" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
