@@ -11,6 +11,7 @@ useradd -mp "" user
 echo "user:user" | chpasswd
 usermod -aG sudo user
 
+apt-get purge -y snapd
 apt-get remove -y apport python3-apport apport-symptoms
 apt-get install -y wine32 wine-binfmt binfmt-support
 
