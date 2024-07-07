@@ -12,11 +12,13 @@ echo "user:user" | chpasswd
 usermod -aG sudo user
 
 apt-get purge -y snapd
-apt-get remove -y apport python3-apport apport-symptoms
+apt-get purge -y apparmor blueman
+apt-get purge -y apport python3-apport apport-symptoms
 apt-get install -y wine32 wine-binfmt binfmt-support
 
 cp /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
 
+ldconfig -X
 update-initramfs -u
 
 rm -rf /var/lib/apt/lists/*
