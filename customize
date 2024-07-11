@@ -11,13 +11,23 @@ useradd -mp "" user
 echo "user:user" | chpasswd
 usermod -aG sudo user
 
+apt-get install -y software-properties-common
+
+add-apt-repository -y ppa:xtradeb/apps
+apt-get install -y \
+  linux-image-virtual \
+  openssh-server \
+  librecad \
+  chromium firefox \
+  `#`
+
+apt-get install -y wine32 wine-binfmt binfmt-support
+cp /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
+
 apt-get purge -y snapd
 apt-get purge -y apparmor blueman
 apt-get purge -y amd64-microcode intel-microcode linux-firmware
 apt-get purge -y apport python3-apport apport-symptoms
-apt-get install -y wine32 wine-binfmt binfmt-support
-
-cp /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
 
 ldconfig -X
 update-initramfs -u

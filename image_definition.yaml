@@ -31,14 +31,6 @@ customization:
   # HACK: `ubuntu-image` will error without the "snapd" snap
   extra-snaps:
     - name: snapd
-  extra-ppas:
-    - name: xtradeb/apps
-  extra-packages:
-    - name: linux-image-virtual
-    - name: openssh-server
-    - name: librecad
-    - name: chromium
-    - name: firefox
   manual:
     copy-file:
       # HACK: needs to be called "chroot" and have "/.." as destination because
