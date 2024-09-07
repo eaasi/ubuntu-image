@@ -24,6 +24,12 @@ apt-get install -y \
 apt-get install -y wine32 wine-binfmt binfmt-support
 cp /usr/share/doc/wine/examples/wine.desktop /usr/share/applications/
 
+mkdir -p /proc
+mount -t proc / /proc
+
+apt-get install -y flatpak
+flatpak install -y https://dl.flathub.org/repo/appstream/org.phoenicis.playonlinux.flatpakref
+
 apt-get purge -y snapd
 apt-get purge -y apparmor blueman
 apt-get purge -y amd64-microcode intel-microcode linux-firmware
